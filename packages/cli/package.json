@@ -1,0 +1,33 @@
+{
+  "name": "@khyfee/a11yguard",
+  "version": "0.1.0",
+  "type": "module",
+  "description": "A11yGuard CLI — review frontend diffs for WCAG issues",
+  "bin": {
+    "a11yguard": "./dist/cli.js"
+  },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "node --import tsx --test src/**/*.test.ts",
+    "demo": "tsx src/cli.ts demo",
+    "doctor": "tsx src/cli.ts doctor"
+  },
+  "dependencies": {
+    "@a11yguard/core": "*",
+    "@axe-core/playwright": "^4.10.1",
+    "playwright": "^1.51.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.13.10",
+    "tsx": "^4.19.3",
+    "typescript": "^5.8.2"
+  },
+  "author": "KhyFee (https://github.com/KhyFee)",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/KhyFee/A11yGuard.git"
+  }
+}

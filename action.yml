@@ -1,0 +1,66 @@
+name: 'A11yGuard'
+description: 'Review frontend PRs for WCAG accessibility issues with one-click fix suggestions.'
+author: 'KhyFee'
+branding:
+  icon: 'eye'
+  color: 'blue'
+inputs:
+  github-token:
+    description: 'GitHub token'
+    required: false
+    default: ${{ github.token }}
+  fail-on:
+    description: 'error | warning | never'
+    required: false
+    default: 'error'
+  fail-on-new:
+    description: 'Only fail on new findings vs baseline'
+    required: false
+    default: 'true'
+  config-path:
+    description: 'Path to .a11yguard.yml'
+    required: false
+  baseline-path:
+    description: 'Baseline JSON path'
+    required: false
+  axe:
+    description: 'Enable axe-core via preview-url'
+    required: false
+    default: 'false'
+  preview-url:
+    description: 'URL for axe scan'
+    required: false
+  llm-api-key:
+    description: 'Optional OpenAI-compatible API key'
+    required: false
+  llm-model:
+    description: 'LLM model id'
+    required: false
+  llm-base-url:
+    description: 'LLM API base URL'
+    required: false
+  post-review:
+    description: 'Post inline suggestion review'
+    required: false
+    default: 'true'
+  sticky-comment:
+    description: 'Upsert sticky PR summary comment'
+    required: false
+    default: 'true'
+  upload-sarif:
+    description: 'Write SARIF and log upload hint'
+    required: false
+    default: 'false'
+  dir:
+    description: 'Directory to scan on non-PR events'
+    required: false
+outputs:
+  grade:
+    description: 'A–F grade'
+  new-count:
+    description: 'New finding count'
+  sarif-path:
+    description: 'Path to report.sarif'
+runs:
+  using: 'node20'
+  main: 'packages/action/dist/main.js'
