@@ -1,0 +1,6 @@
+services:
+  a11yguard:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+    command: npm run demo
