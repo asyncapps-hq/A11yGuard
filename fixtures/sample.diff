@@ -1,0 +1,14 @@
+--- a/fixtures/bad-app/index.html
++++ b/fixtures/bad-app/index.html
+@@ -8,10 +8,12 @@
+ </head>
+ <body>
+-  <img src="hero.png" alt="ok">
++  <img src="hero.png">
++  <div onclick="alert('x')">Click me</div>
++  <button></button>
+   <main>
+     <p>Welcome</p>
+   </main>
+ </body>
+ </html>

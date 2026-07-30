@@ -1,0 +1,25 @@
+{
+  "product": "A11yGuard",
+  "author": "KhyFee",
+  "generatedAt": "2026-07-30T00:00:00.000Z",
+  "grade": "F",
+  "newCount": 2,
+  "preexistingCount": 0,
+  "findings": [
+    {
+      "ruleId": "img-alt",
+      "severity": "error",
+      "message": "Image is missing an alt attribute",
+      "path": "fixtures/bad-app/index.html",
+      "line": 11,
+      "snippet": "<img src=\"hero.png\">",
+      "wcag": ["1.1.1"],
+      "wcagLevel": "A",
+      "confidence": "high",
+      "fingerprint": "sample1",
+      "suggestion": "<img alt=\"\" src=\"hero.png\">",
+      "isNew": true
+    }
+  ],
+  "summaryMarkdown": "<!-- a11yguard-report -->\n## A11yGuard accessibility review\n"
+}

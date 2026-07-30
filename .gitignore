@@ -1,0 +1,14 @@
+node_modules/
+dist/
+.next/
+.a11yguard/
+coverage/
+playwright-report/
+test-results/
+.env
+.env.local
+*.log
+.DS_Store
+*.tsbuildinfo
+*.pem
+*.tgz

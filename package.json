@@ -1,0 +1,27 @@
+{
+  "name": "a11yguard",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Automated PR Accessibility Reviewer — WCAG findings, one-click suggestions, SARIF",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "build": "npm run build -w @a11yguard/core && npm run build -w @khyfee/a11yguard && npm run build -w @a11yguard/action && npm run build -w @a11yguard/web",
+    "test": "npm run build -w @a11yguard/core && npm run test -w @a11yguard/core && npm run test -w @khyfee/a11yguard && npm run test -w @a11yguard/action",
+    "demo": "npm run demo -w @khyfee/a11yguard",
+    "doctor": "npm run doctor -w @khyfee/a11yguard",
+    "dev:web": "npm run dev -w @a11yguard/web"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "author": "KhyFee (https://github.com/KhyFee)",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/KhyFee/A11yGuard.git"
+  },
+  "homepage": "https://github.com/KhyFee/A11yGuard#readme"
+}

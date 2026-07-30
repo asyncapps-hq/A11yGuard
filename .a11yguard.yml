@@ -1,0 +1,14 @@
+paths:
+  - "**/*.{html,htm,jsx,tsx,css,scss}"
+ignore-paths:
+  - "**/node_modules/**"
+  - "**/dist/**"
+wcag-level: AA
+fail-on: error
+fail-on-new: true
+baseline: .a11yguard/baseline.json
+axe: false
+rules: {}
+suppressions: []
+llm:
+  enabled: false
